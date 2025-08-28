@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coração Anima - Adoção de Pets</title>
+    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo/coracao-anima-logo.png" alt="Coração Anima Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="adotar.html">Adotar</a></li>
+                    <li><a href="cadastro-pet.html">Cadastrar Pet</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="favoritos.html" class="btn-icon" title="Favoritos">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="login.html" class="btn btn-outline">Entrar</a>
+                <a href="cadastro.html" class="btn btn-primary">Cadastrar</a>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Carousel -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Encontre seu melhor amigo</h1>
+                    <p>Conectamos animais em busca de um lar com pessoas cheias de amor para dar.</p>
+                    <div class="hero-buttons">
+                        <a href="adotar.html" class="btn btn-primary btn-lg">Adotar agora</a>
+                        <a href="cadastro-pet.html" class="btn btn-outline btn-lg">Cadastrar pet</a>
+                    </div>
+                </div>
+                <div class="hero-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <!-- Imagens do carrossel -->
+                            <div class="carousel-slide">
+                                <img src="assets/images/carousel/slide1.jpg" alt="Cachorro e seu dono felizes">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/carousel/slide2.jpg" alt="Gato brincando com brinquedo">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/carousel/slide3.jpg" alt="Família com cachorro adotado">
+                            </div>
+                        </div>
+                        
+                        <!-- Controles do carrossel -->
+                        <button class="carousel-button prev" aria-label="Imagem anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next" aria-label="Próxima imagem">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <!-- Indicadores do carrossel -->
+                        <div class="carousel-indicators">
+                            <button class="indicator active" data-index="0" aria-label="Slide 1"></button>
+                            <button class="indicator" data-index="1" aria-label="Slide 2"></button>
+                            <button class="indicator" data-index="2" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="pet-search">
+            <div class="container">
+                <div class="search-container">
+                    <h2>Encontre o pet ideal para você</h2>
+                    <form class="search-form">
+                        <div class="form-group">
+                            <label for="pet-type">Tipo</label>
+                            <select id="pet-type" name="pet-type">
+                                <option value="">Todos</option>
+                                <option value="cachorro">Cachorro</option>
+                                <option value="gato">Gato</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pet-breed">Raça</label>
+                            <select id="pet-breed" name="pet-breed">
+                                <option value="">Todas</option>
+                                <!-- JS irá preencher com base no tipo selecionado -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pet-location">Localização</label>
+                            <input type="text" id="pet-location" name="pet-location" placeholder="Digite sua cidade">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Pets Section -->
+        <section class="featured-pets">
+            <div class="container">
+                <h2 class="section-title">Pets em destaque</h2>
+                <p class="section-subtitle">Estes amiguinhos estão ansiosos para encontrar um novo lar</p>
+                
+                <div class="pet-grid">
+                    <!-- Pets serão carregados dinamicamente com JavaScript -->
+                    <!-- Template de exemplo: -->
+                    <div class="pet-card">
+                        <div class="pet-card-image">
+                            <img src="assets/images/pets/dog1.jpg" alt="Rex - Cachorro para adoção">
+                            <button class="favorite-btn" data-pet-id="1">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="pet-card-content">
+                            <h3>Rex</h3>
+                            <p class="pet-info">Cachorro · Labrador · 2 anos</p>
+                            <p class="pet-location"><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                            <a href="pet-detalhes.html?id=1" class="btn btn-outline btn-block">Ver detalhes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Exemplo de mais dois pets para visualização -->
+                    <div class="pet-card">
+                        <div class="pet-card-image">
+                            <img src="assets/images/pets/cat1.jpg" alt="Luna - Gato para adoção">
+                            <button class="favorite-btn" data-pet-id="2">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="pet-card-content">
+                            <h3>Luna</h3>
+                            <p class="pet-info">Gato · Siamês · 1 ano</p>
+                            <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
+                            <a href="pet-detalhes.html?id=2" class="btn btn-outline btn-block">Ver detalhes</a>
+                        </div>
+                    </div>
+                    
+                    <div class="pet-card">
+                        <div class="pet-card-image">
+                            <img src="assets/images/pets/dog2.jpg" alt="Tobby - Cachorro para adoção">
+                            <button class="favorite-btn" data-pet-id="3">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="pet-card-content">
+                            <h3>Tobby</h3>
+                            <p class="pet-info">Cachorro · Vira-lata · 3 anos</p>
+                            <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Belo Horizonte, MG</p>
+                            <a href="pet-detalhes.html?id=3" class="btn btn-outline btn-block">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="adotar.html" class="btn btn-primary">Ver todos os pets</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">Como funciona</h2>
+                <p class="section-subtitle">Três passos simples para adotar seu novo amigo</p>
+                
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>1. Encontre</h3>
+                        <p>Pesquise e filtre pets disponíveis para adoção na sua região</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>2. Solicite</h3>
+                        <p>Preencha o formulário de adoção e aguarde o contato</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>3. Acolha</h3>
+                        <p>Depois da aprovação, receba seu novo amigo em casa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Histórias de sucesso</h2>
+                <p class="section-subtitle">Famílias que encontraram seus companheiros através do Coração Anima</p>
+                
+                <div class="testimonial-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="assets/images/testimonials/testimonial1.jpg" alt="Maria e Max">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Adotar o Max foi a melhor decisão que já tomamos. Ele trouxe tanta alegria para nossa família! O processo foi simples e seguro."</p>
+                            <h4>Maria Silva</h4>
+                            <p class="testimonial-pet">Adotou Max há 8 meses</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="assets/images/testimonials/testimonial2.jpg" alt="João e Luna">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"A Luna se adaptou perfeitamente ao nosso apartamento. Ela é dócil e carinhosa. Agradeço muito ao Coração Anima por essa conexão."</p>
+                            <h4>João Oliveira</h4>
+                            <p class="testimonial-pet">Adotou Luna há 3 meses</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Pronto para encontrar seu companheiro?</h2>
+                    <p>Cadastre-se agora e comece sua jornada de adoção</p>
+                    <div class="cta-buttons">
+                        <a href="cadastro.html" class="btn btn-primary btn-lg">Criar conta</a>
+                        <a href="adotar.html" class="btn btn-outline btn-lg">Ver pets disponíveis</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo/coracao-anima-logo.png" alt="Coração Anima Logo">
+                    <p>Conectando corações humanos e animais desde 2024.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navegação</h3>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="adotar.html">Adotar</a></li>
+                            <li><a href="cadastro-pet.html">Cadastrar Pet</a></li>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Recursos</h3>
+                        <ul>
+                            <li><a href="faq.html">Perguntas Frequentes</a></li>
+                            <li><a href="guia-adocao.html">Guia de Adoção</a></li>
+                            <li><a href="cuidados.html">Cuidados com Pets</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Social</h3>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Coração Anima. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="termos.html">Termos de Uso</a>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="homePage.js"></script>
+    <script src="js/pages/home.js"></script>
+</body>
+</html>
