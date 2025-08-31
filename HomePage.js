@@ -14,9 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     const slideWidth = 100; // Em porcentagem
     const totalSlides = slides.length;
+    let isMoving = false; // Flag para controlar o estado da transição
     
     // Função para mover o carrossel
     const moveToSlide = (index) => {
+        if (isMoving) return; // Se o carrossel estiver em movimento, ignore o clique
+
+        isMoving = true; // Define a flag como verdadeira para indicar que o carrossel está em movimento
+        
         // Verificar limites
         if (index < 0) {
             index = totalSlides - 1;
@@ -34,6 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Atualizar índice atual
         currentIndex = index;
+
+        // Resetar a flag isMoving após a duração da transição (0.8 segundos)
+        setTimeout(() => {
+            isMoving = false;
+        }, 800);
     };
     
     // Event listeners para botões
@@ -58,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startAutoplay = () => {
         autoplayInterval = setInterval(() => {
             moveToSlide(currentIndex + 1);
-        }, 5000); // Mudar slide a cada 5 segundos
+        }, 4000); // Mudar slide a cada 5 segundos
     };
     
     const stopAutoplay = () => {

@@ -182,6 +182,20 @@ p {
     height: 50px;
 }
 
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFB347; /* Cor do texto PetLove */
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.logo a i {
+    color: #6EC6CA; /* Cor do ícone de coração */
+    font-size: 1.8rem;
+}
+
 .main-nav {
     display: flex;
 }
@@ -307,12 +321,11 @@ p {
 
 .carousel-track {
     display: flex;
-    width: 300%;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.8s ease-in-out;
 }
 
 .carousel-slide {
-    width: 100%;
+    flex: 0 0 100%;
     height: 350px;
 }
 
