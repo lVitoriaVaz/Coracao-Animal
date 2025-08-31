@@ -1,5 +1,5 @@
 # PetLove🐶 🐱
-O Coração Animal é um projeto de site desenvolvido com o objetivo de treinar minhas habilidades em desenvolvimento web, ao mesmo tempo em que aborda um problema real: o abandono de animais e a dificuldade no processo de adoção.
+O PetLove é um projeto de site desenvolvido com o objetivo de treinar minhas habilidades em desenvolvimento web, ao mesmo tempo em que aborda um problema real: o abandono de animais e a dificuldade no processo de adoção.
 
 A ideia do projeto é criar uma aplicação web acessível, prática e com visual agradável, que conecte abrigos, ONGs e pessoas interessadas em adotar um pet. Muitos animais estão esperando por um lar, mas a adoção ainda é um processo demorado, com pouca visibilidade e organização. Por isso, o site busca facilitar esse contato e tornar o processo mais seguro e eficiente.
 
